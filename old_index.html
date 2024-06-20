@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,62 +8,40 @@
   <!-- All the images on the course page were taken from https://www.flaticon.com/ -->
 
 </head>
+<body class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white overflow-hidden h-screen">
 
-
-<body
-  class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white overflow-hidden overflow-y-scroll scroll-smooth h-full">
-  <div class="navbar bg-base-100 w-full">
-    <div class="navbar-start">
-
-      <div class="flex space-x-4 hidden sm:flex">
+  <!-- Fixed Header -->
+  <div class="navbar bg-base-100 fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 h-16">
+    <div class="flex space-x-4">
         <a href="#" class="btn btn-ghost">Projects</a>
         <a href="#" class="btn btn-ghost">Courses</a>
         <a href="#" class="btn btn-ghost">Stack</a>
-      </div>
-
-      <div class="block md:hidden dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
-          </svg>
-        </div>
-        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-40">
-          <li><a>Homepage</a></li>
-          <li><a>Portfolio</a></li>
-          <li><a>About</a></li>
-          <li class="block md:hidden"></li>
-          <li class="block md:hidden flex flex-row"><img src="imgs/git2.png" alt="Right Link 1" class="h-10 w-auto"><img src="imgs/link.png" alt="Right Link 1" class="h-10 w-auto"></li>
-          <li class="block md:hidden flex flex-row"><img src="imgs/inventory.png" alt="Right Link 1" class="h-10 w-auto"><img src="imgs/mail.png" alt="Right Link 1" class="h-10 w-auto"></li>
-        
-        </ul>
-      </div>
     </div>
-
-    <div class="navbar-center">
-      <a class="btn btn-ghost text-xl p-2">printf("%s",hamzaMehmood.life());</a>
-    </div>
-
-    <div class="navbar-end space-x-3 md:space-x-4 flex flex-wrap items-center p-2 hidden md:flex">
-      <a href="#" class="btn btn-ghost flex items-center">
-        <img src="imgs/git2.png" alt="Right Link 1" class="h-full max-h-full"> <!-- Adjust the height as needed -->
-      </a>
-      <a href="#" class="btn btn-ghost flex items-center">
-        <img src="imgs/link.png" alt="Right Link 2" class="h-full max-h-full transform scale-150">
-        <!-- Adjust the height as needed -->
-      </a>
-      <a href="#" class="btn btn-ghost flex items-center">
-        <img src="imgs/inventory.png" alt="Right Link 3" class="h-full max-h-full"> <!-- Adjust the height as needed -->
+    <a class="btn btn-ghost text-xl absolute left-1/2 transform -translate-x-1/2">printf("%s", hamzaMehmood.life());</a>
+    <div class="flex space-x-4">
+        <a href="#" class="btn btn-ghost flex items-center">
+            <img src="imgs/git2.png" alt="Right Link 1" class="h-full max-h-full"> <!-- Adjust the height as needed -->
+        </a>
+        <a href="#" class="btn btn-ghost flex items-center">
+            <img src="imgs/link.png" alt="Right Link 2" class="h-full max-h-full transform scale-150"> <!-- Adjust the height as needed -->
+        </a>
+        <a href="#" class="btn btn-ghost flex items-center">
+          <img src="imgs/inventory.png" alt="Right Link 3" class="h-full max-h-full"> <!-- Adjust the height as needed -->
       </a>
       <a href="#" class="btn btn-ghost flex items-center">
         <img src="imgs/mail.png" alt="Right Link 5" class="h-full max-h-full"> <!-- Adjust the height as needed -->
-      </a>
+    </a>
     </div>
-  </div>
+</div>
+<div class="p-8"></div>
+
+
+  <!-- Scrollable Content -->
   <div class="overflow-y-scroll scroll-smooth focus:scroll-auto h-full p-16 shadow-2xl shadow-black">
 
     
     <!-- About Section -->
-    <div class="shadow shadow-2xl px-4 sm:px-1 rounded-t-3xl bg-customBlack flex flex-col justify-center items-center bg-opacity-80 py-6" id="about">
+    <div class="shadow shadow-2xl py-5 px-4 rounded-t-3xl bg-customBlack flex flex-col justify-center items-center bg-opacity-80" id="about">
       <div class="flex flex-col sm:flex-row p-4 items-center">
         <div class="flex flex-col justify-center items-center">
           <img src="imgs/m.jpeg" class="mr-0 sm:mr-4 p-2 bg-gradient-to-r from-cyan-500 to-blue-500 shadow-2xl mb-4 sm:mb-0 rounded-full w-2/7" alt="none">
@@ -81,11 +58,11 @@
     </div>
 
     <!-- Projects Intro -->
-    <div class="shadow shadow-2xl bg-customBlack flex flex-col justify-center items-center bg-opacity-80 border-t border-white h-full py-6" id="projects">
+    <div class="shadow shadow-2xl bg-customBlack flex flex-col justify-center items-center bg-opacity-80 border-t border-white h-full" id="projects">
       <div class="flex flex-col sm:flex-row items-center w-full">
         <div class="flex flex-col justify-center items-center w-full">
           <div>
-            <span class="text-4xl sm:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 m-1 p-1">These Are My Projects</span>
+            <span class="text-4xl sm:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-500">These Are My Projects</span>
           </div>
           <div>
             <br><span class="small">(more on github)</span>
@@ -95,7 +72,7 @@
     </div>
 
     <!-- PROJECT_1 -->
-    <div class="shadow shadow-2xl bg-customBlack flex flex-col justify-center items-center bg-opacity-80 border-t border-white h-full py-6" id="project_1">
+    <div class="shadow shadow-2xl bg-customBlack flex flex-col justify-center items-center bg-opacity-80 border-t border-white h-full" id="project_1">
       <div class="flex flex-col sm:flex-row items-center w-full">
         <div class="flex flex-col justify-center items-center w-full">
 
@@ -156,7 +133,7 @@
 
 
 
-    <div class="shadow shadow-2xl bg-customBlack flex flex-col justify-center items-center bg-opacity-80 border-t border-white h-full py-6" id="project_2">
+    <div class="shadow shadow-2xl bg-customBlack flex flex-col justify-center items-center bg-opacity-80 border-t border-white h-full" id="project_2">
       <div class="flex flex-col sm:flex-row items-center w-full">
         <div class="flex flex-col justify-center items-center w-full">
 
@@ -206,7 +183,7 @@
 
 
 
-    <div class="shadow shadow-2xl bg-customBlack flex flex-col justify-center items-center bg-opacity-80 border-t border-white h-full py-16" id="Courses">
+    <div class="shadow shadow-2xl bg-customBlack flex flex-col justify-center items-center bg-opacity-80 border-t border-white h-full" id="Courses">
       <div class="flex flex-col items-center w-full">
         <div class="flex flex-col justify-center items-center w-full">
           <div>
@@ -277,7 +254,7 @@
       </div>
     </div>
     
-    <div class="shadow shadow-2xl bg-customBlack flex flex-col justify-center items-center bg-opacity-80 border-t border-white h-full rounded-b-3xl p-16" id="Stack">
+    <div class="shadow shadow-2xl bg-customBlack flex flex-col justify-center items-center bg-opacity-80 border-t border-white h-full rounded-b-3xl" id="Stack">
       <div class="flex flex-col items-center w-full">
         <div class="flex flex-col justify-center items-center w-full">
           <div>
@@ -393,5 +370,3 @@
   </div>
 </body>
 </html>
-
-</body>
