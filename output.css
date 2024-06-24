@@ -1215,6 +1215,33 @@ html {
   background-color: var(--fallback-bc,oklch(var(--bc)/0.2));
 }
 
+.stack {
+  display: inline-grid;
+  place-items: center;
+  align-items: flex-end;
+}
+
+.stack > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  transform: translateY(10%) scale(0.9);
+  z-index: 1;
+  width: 100%;
+  opacity: 0.6;
+}
+
+.stack > *:nth-child(2) {
+  transform: translateY(5%) scale(0.95);
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.stack > *:nth-child(1) {
+  transform: translateY(0) scale(1);
+  z-index: 3;
+  opacity: 1;
+}
+
 .swap {
   position: relative;
   display: inline-grid;
@@ -1981,6 +2008,10 @@ html {
   width: 100%;
 }
 
+.w-12 {
+  width: 3rem;
+}
+
 .max-w-5xl {
   max-width: 64rem;
 }
@@ -2105,6 +2136,11 @@ html {
   background-color: rgb(24 24 24 / var(--tw-bg-opacity));
 }
 
+.bg-red-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-0 {
   --tw-bg-opacity: 0;
 }
@@ -2119,6 +2155,10 @@ html {
 
 .bg-opacity-80 {
   --tw-bg-opacity: 0.8;
+}
+
+.bg-opacity-30 {
+  --tw-bg-opacity: 0.3;
 }
 
 .bg-gradient-to-r {
@@ -2172,10 +2212,6 @@ html {
   padding: 2rem;
 }
 
-.p-6 {
-  padding: 1.5rem;
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -2202,6 +2238,10 @@ html {
 
 .pt-3 {
   padding-top: 0.75rem;
+}
+
+.pt-80 {
+  padding-top: 20rem;
 }
 
 .text-center {
@@ -2276,6 +2316,11 @@ p {
   color: transparent;
 }
 
+html {
+  scroll-padding-top: 80px;
+  /* Adjust this value to the height of your fixed header */
+}
+
 .hover\:bg-opacity-60:hover {
   --tw-bg-opacity: 0.6;
 }
@@ -2297,12 +2342,28 @@ p {
     display: flex;
   }
 
+  .sm\:w-4 {
+    width: 1rem;
+  }
+
+  .sm\:w-12 {
+    width: 3rem;
+  }
+
+  .sm\:w-24 {
+    width: 6rem;
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
 
-  .sm\:p-6 {
-    padding: 1.5rem;
+  .sm\:p-1 {
+    padding: 0.25rem;
+  }
+
+  .sm\:p-2 {
+    padding: 0.5rem;
   }
 
   .sm\:px-1 {
@@ -2338,6 +2399,10 @@ p {
     width: 24rem;
   }
 
+  .md\:w-4 {
+    width: 1rem;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -2346,10 +2411,6 @@ p {
     --tw-space-x-reverse: 0;
     margin-right: calc(1rem * var(--tw-space-x-reverse));
     margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .md\:p-6 {
-    padding: 1.5rem;
   }
 
   .md\:p-16 {
